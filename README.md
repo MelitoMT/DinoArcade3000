@@ -1,1 +1,1 @@
-# DinoArcade3000S🦖
+# DinoArcade3000🦖
