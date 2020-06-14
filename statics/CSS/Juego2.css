@@ -1,5 +1,5 @@
 body {
-  background-image: url(burbujas.jpg);
+  background-image: url(../Images/burbujas.jpg);
   font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
   user-select: none;
   min-width: 420px;
@@ -47,7 +47,7 @@ button {
 }
 #sky {
   height: 66px;
-  background-image: url(fondo.jpg);
+  background-image: url(../Images/fondo.jpg);
 }
 #mountains {
   width: 960px; height: 0;
