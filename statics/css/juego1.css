@@ -1,0 +1,17 @@
+.tamano{
+  width: 799px;
+  height: 667px;
+}
+.filaP1 {
+  color: black;
+  background-color: #ABCDEF;
+  border: 1px solid black;
+}
+.filaN {
+  color: black;
+  background-color: #123456;
+  border: 1px solid black;
+}
+.azulillo{
+  background-color: #123456;
+}
