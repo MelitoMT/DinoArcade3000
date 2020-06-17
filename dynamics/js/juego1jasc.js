@@ -35,40 +35,36 @@ function elTodo()
   let vidasP2 = 9;
   let vidasP3 = 9;
   let vidasP4 = 9;
-
+  //Arreglo con las casillas ordenadas que deben existir
   var arrEsc = new Array(30,20,10,11,1,2,3,4,5,15,16,17,18,19,29,39,38,48,47,46,36,
     35,34,33,43,53,54,64,65,66,67,68,78,88,87,86,85,84,83,82,81,71,70,60,50,40);
-
+  //Posiciones iniciales de los jugadores
   let posP3 = 0;
   let posP4 = 0;
   let posP1 = 0;
   let posP2 = 0;
-
+  //Asegura el valor del dado con el turno detenido
   if (pase == false)
   {
     dadoNum = 0;
   }
-
-  console.log(alto);
-  console.log(ancho);
-
+  //Establece por primera vez la zona de información
   var avanceP1 = document.createElement("h3");
   avanceP1.setAttribute("id","avanceDado");
   avanceP1.innerText = "Iniciando";
   let body = document.getElementsByTagName("article");
   body[0].appendChild(avanceP1);
-
+  //Funcion que se repite todo el tiempo que el tablero se quiera reiniciar
   function creaTablero()
   {
     if(gusViv > 1);
     {
-      //console.log(turno);
+      //Borra los elementos del paso anterior
       var borrando = document.getElementById("contenedorgen");
       borrando.remove();
       var borrandoCif = document.getElementById("avanceDado");
       borrandoCif.remove();
-
-
+      //Obtiene el total de casillas
       nums = (numFilas)*(numColumnas);
       increm = 0;
       autos = " ";
@@ -77,9 +73,10 @@ function elTodo()
       ancho = window.innerWidth;
       alto = window.innerHeight;
       pasoArr = 0;
+
       arrEsc = new Array(30,20,10,11,1,2,3,4,5,15,16,17,18,19,29,39,38,48,47,46,36,
       35,34,33,43,53,54,64,65,66,67,68,78,88,87,86,85,84,83,82,81,71,70,60,50,40);
-
+      //Esta estructura busca que el turno se cambie en caso de que alguno de los gusanos sea derrotado
       if((turno == "P1")&&(vidasP1 == "Fin"))
       {
         if(vidasP2 != "Fin")
@@ -154,7 +151,7 @@ function elTodo()
       }
 
       document.onkeyup = teclado;
-
+      //Maniene fijos los valores del dado sin la apuesta y la apuesta en caso de estár detenido el juego
       if(pase == false){
         dadoSin = 0;
         apuesta = 0;
@@ -173,7 +170,7 @@ function elTodo()
       let body = document.getElementsByTagName("article");
       body[0].appendChild(avanceP1);
 
-
+      //Detiene el paso de los gusanos que han sido derrotados
       if((pase == true) && (dadoNum != 0))
       {
         if(turno === "P4")
@@ -284,7 +281,7 @@ function elTodo()
       body[0].appendChild(conten);
 
 
-      //Posicionamiento de casillas
+      //Posicionamiento de casillas a partir del arreglo de arriba con las especificaciones de casillas especiales, verifica los tipos de casillas
       while(increm < nums)
       {
         var casilla = document.createElement("div");
@@ -366,32 +363,33 @@ function elTodo()
         increm = increm + 1;
       }
 
-      //Casillas especiales
+      //Administra el funcionamiento de las dos casillas especiales
       if(pase == false)
       {
-        //Punto Extra
+        //Punto Extra verifica los posibles casos y otorga vidas y puntos extra
         if((casRe1 == posP1)||(casRe1 == posP2)||(casRe1 == posP3)||(casRe1 == posP4))
         {
           if(casRe1 == posP1)
           {
-            vidasP1 = vidasP1 + 2;
+            vidasP1 = vidasP1 + 4;
             puntosP1 = puntosP1 + 50;
           }
           else if(casRe1 == posP2)
           {
-            vidasP2 = vidasP2 + 2;
+            vidasP2 = vidasP2 + 4;
             puntosP2 = puntosP2 + 50;
           }
           else if(casRe1 == posP3)
           {
-            vidasP3 = vidasP3 + 2;
+            vidasP3 = vidasP3 + 4;
             puntosP3 = puntosP3 + 50;
           }
           else if(casRe1 == posP4)
           {
-            vidasP4 = vidasP4 + 2;
+            vidasP4 = vidasP4 + 4;
             puntosP4 = puntosP4 + 50;
           }
+          //Al comprobar el contacto con alguno de los jugadores se posiciona en un nuevo lugar
           while((casRe1 == posP1)||(casRe1 == posP2)||(casRe1 == posP3)||(casRe1 == posP4))
           {
             casRe1 = (Math.round(Math.random()*22));
@@ -401,32 +399,32 @@ function elTodo()
         {
           if(casRe2 == posP1)
           {
-            vidasP1 = vidasP1 + 2;
+            vidasP1 = vidasP1 + 4;
             puntosP1 = puntosP1 + 50;
           }
           else if(casRe2 == posP2)
           {
-            vidasP2 = vidasP2 + 2;
+            vidasP2 = vidasP2 + 4;
             puntosP2 = puntosP2 + 50;
           }
           else if(casRe2 == posP3)
           {
-            vidasP3 = vidasP3 + 2;
+            vidasP3 = vidasP3 + 4;
             puntosP3 = puntosP3 + 50;
           }
           else if(casRe2 == posP4)
           {
-            vidasP4 = vidasP4 + 2;
+            vidasP4 = vidasP4 + 4;
             puntosP4 = puntosP4 + 50;
           }
           while((casRe2 == posP1)||(casRe2 == posP2)||(casRe2 == posP3)||(casRe2 == posP4))
           {
-            casRe2 = ((Math.round(Math.random()*45)) + 22);
+            casRe2 = ((Math.round(Math.random()*22)) + 22);
           }
         }
       }
 
-      //Administrador de muerte
+      //Administrador de muerte verifica cuando se han acabado las vidas de algún jugador y las bloquea junto a sus posibilidades de avance
       if(dadoNum == 0)
       {
         if((isNaN(vidasP1) == false)&&(vidasP1 == 0))
@@ -451,7 +449,7 @@ function elTodo()
         }
       }
 
-      //Evento de teclado
+      //Evento de teclado que verifica la tecla presionada para la apuesta de número
       function teclado(event)
       {
         enter = event.keyCode;
@@ -476,6 +474,7 @@ function elTodo()
             dadoNum = (Math.round(Math.random()*3) + apuesta);
             dadoSin = dadoNum - apuesta;
             pasoAdelante = dadoNum;
+            //Realiza el cambio de turno al siguiente jugador
             turno = "P4";
             turnoE = "P1";
             if(vidasP4 != "Fin")
@@ -527,8 +526,7 @@ function elTodo()
     }
     if(gusViv == 1)
     {
-
-
+      //Termina el juego en caso de que solo quede un gusanito
       function juegoloop()
       {
         if(para === false)
@@ -537,7 +535,7 @@ function elTodo()
           elimina.remove();
 
           document.onkeyup = listo;
-
+          //Coloca en pantalla al gusano ganaor
           var present = document.createElement("h1");
           present.setAttribute("id","comenzar");
           if(vidasP1 != "Fin")
@@ -563,6 +561,7 @@ function elTodo()
           let pantalla = document.getElementsByTagName("article");
           pantalla[0].appendChild(present);
         }
+        //Reinicia la página tras haber ganado
         function listo(event)
         {
           espacio = event.keyCode;
@@ -575,12 +574,13 @@ function elTodo()
             window.location.reload();
           }
         }
+        //Este timeout repite la función
         setTimeout(() =>
         {
           juegoloop();
         }, 100);
       }
-
+      //Tras termindo el juego, establece la pantalla de finalización por primera vez
       function juegoTerm()
       {
         var borrando = document.getElementById("contenedorgen");
@@ -609,14 +609,11 @@ function elTodo()
         let pantalla = document.getElementsByTagName("article");
         pantalla[0].appendChild(present);
 
-        //let para = false;
-
         setTimeout(() =>
         {
           juegoloop();
         }, 100);
       }
-      console.log(gusViv);
       juegoTerm();
     }
 
@@ -626,7 +623,7 @@ function elTodo()
     }, 250);
   }
 
-  //Creación inicial de todo
+  //Creación inicial del tablero
   while (paraCads < numColumnas )
   {
     autos = autos + "auto ";
@@ -638,7 +635,7 @@ function elTodo()
   conten.classList.add("tamano");
   body[0].appendChild(conten);
 
-
+  //Posiciona por primera vez las casillas
   while(increm < nums)
   {
     var casilla = document.createElement("div");
@@ -663,7 +660,7 @@ function elTodo()
 }
 
 
-
+//Función de la pantalla de inicio
 function panInicio()
 {
   if(detente === false)
@@ -679,6 +676,7 @@ function panInicio()
     let pantalla = document.getElementsByTagName("article");
     pantalla[0].appendChild(present);
   }
+  //Evento que espera se presione la tecla espacio
   function listo(event)
   {
     espacio = event.keyCode;
@@ -707,5 +705,5 @@ present.setAttribute("id","comenzar");
 present.innerHTML = "Presiona Espacio para comenzar..."
 let pantalla = document.getElementsByTagName("article");
 pantalla[0].appendChild(present);
-
+//Envía a la función que se repite 
 panInicio();
