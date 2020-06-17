@@ -69,6 +69,7 @@ a:hover, a:active{
         width:1000px;
         background-image: url(../Img/iniciobg.jpg);
         margin: auto;
+        top:0;
     }
     .arcade{
         z-index: 5;
@@ -77,7 +78,7 @@ a:hover, a:active{
         position: relative;
         height:450px;
         width:300px;
-        left:20%;
+        left:70%;
         top:30%;
         transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
     }
@@ -173,6 +174,14 @@ a:hover, a:active{
     .score{
         left:28%;
     }
+    .none:hover{
+        background-color: transparent;
+    }
+    
+    .none:link, .none:visited{
+        color: rgb(248, 248, 248);
+    }
+
     @keyframes screen {
         0%{
             background: #000000;
@@ -204,5 +213,22 @@ a:hover, a:active{
         }
         100%{
             opacity:1;
+        }
+    }
+    @media only screen and (min-width: 150px) and (max-width: 600px) {
+        .nav nav{
+          height: 300px;
+        }
+        .nav nav ul{
+          padding-left: 0;
+        }
+        .nav nav ul li{
+          text-align: center;
+          width: 100%;
+        }
+        .nav nav a:link, .nav nav a:visited{
+          display: block;
+          height: 20px;
+          padding: 10px 25px;
         }
     }
