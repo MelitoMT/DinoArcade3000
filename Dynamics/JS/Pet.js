@@ -46,7 +46,7 @@ fetch('Nav.html')
                 let content = document.querySelector("#content");
                 content.innerHTML = text;
                 document.querySelector("#Juego1").addEventListener("click",()=>{
-                    games('Juego1.html');
+                    games('juego1.html');
                 })
                 document.querySelector("#Juego2").addEventListener("click",()=>{
                     games('Juego2.html');
