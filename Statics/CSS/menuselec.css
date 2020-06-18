@@ -1,0 +1,106 @@
+#contenOpc{
+  background-color: #D1D1D1;
+  border-bottom: 10px solid #AAA1A1;
+  border-left: 10px solid #222121;
+  border-right: 10px solid #AAA1A1;
+  border-top: 10px solid #222121;
+  border: 10%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 5%;
+}
+#general{
+  padding-bottom:8%;
+  padding-left:5%;
+  padding-right:5%;
+  padding-top:5%;
+}
+.contenJue{
+  background-color: #FFFFFF;
+  border: 1px solid black;
+  bottom: 0%;
+  box-shadow: 0px 0px 0px gray;
+  margin: auto;
+  padding-top:5%;
+  position: relative;
+  text-indent: 10%;
+  transition: all .5s;
+  width: 80%;
+}
+.contenJue:hover{
+  bottom: 8%;
+  box-shadow: 0px 20px 10px gray;
+  position: relative;
+  transition: all .5s;
+}
+.cuadImg{
+  text-align: center;
+  text-indent: 0%;
+}
+.infor{
+  background-color: #123456;
+  border: 1px solid black;
+  color: white;
+  font-size: 22px;
+  margin-left: auto;
+  position: relative;
+  right: 10%;
+  text-align: center;
+  text-indent: 0%;
+  transition: background-color .5s;
+  width: 30%;
+}
+.infor:hover{
+  background-color: #456789;
+  transition: background-color .5s;
+}
+.puntua{
+  background-color: #ABCDEF;
+  border-top: 1px solid black;
+  font-size: 20px;
+  text-align: center;
+  text-indent: 0%;
+  width: 100%;
+}
+.puntua:hover{
+  background-color: #89ABCD;
+}
+
+.creditosCont{
+  padding-top: 10%;
+}
+.creditos{
+  background-color: #123456;
+  border: 1px solid black;
+  color: white;
+  font-size: 22px;
+  margin: auto;
+  right: 10%;
+  text-align: center;
+  text-indent: 0%;
+  transition: background-color .5s;
+  width: 100%;
+}
+.creditos:hover{
+  background-color: #456789;
+  transition: background-color .5s;
+}
+body{
+  background-color: #555151;
+  font-family: 'Quantico', sans-serif;
+}
+img{
+  border: 1px solid black;
+  height: 50%;
+  width: 50%;
+}
+header{
+  background-color: black;
+  color: white;
+  padding-top: -10%;
+  text-align: center;
+  width: 100%;
+}
+h1{
+  text-shadow: 0px 4px 1px #00AAFF;
+}
