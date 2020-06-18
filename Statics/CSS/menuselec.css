@@ -8,12 +8,14 @@
   display: grid;
   grid-template-columns: auto auto auto;
   padding-top: 5%;
+  text-decoration: none;
 }
 #general{
   padding-bottom:8%;
   padding-left:5%;
   padding-right:5%;
   padding-top:5%;
+  text-decoration: none;
 }
 .contenJue{
   background-color: #FFFFFF;
@@ -23,6 +25,7 @@
   margin: auto;
   padding-top:5%;
   position: relative;
+  text-decoration: none;
   text-indent: 10%;
   transition: all .5s;
   width: 80%;
@@ -31,10 +34,12 @@
   bottom: 8%;
   box-shadow: 0px 20px 10px gray;
   position: relative;
+  text-decoration: none;
   transition: all .5s;
 }
 .cuadImg{
   text-align: center;
+  text-decoration: none;
   text-indent: 0%;
 }
 .infor{
@@ -46,6 +51,7 @@
   position: relative;
   right: 10%;
   text-align: center;
+  text-decoration: none;
   text-indent: 0%;
   transition: background-color .5s;
   width: 30%;
@@ -61,6 +67,7 @@
   text-align: center;
   text-indent: 0%;
   width: 100%;
+  text-decoration: none;
 }
 .puntua:hover{
   background-color: #89ABCD;
@@ -68,6 +75,7 @@
 
 .creditosCont{
   padding-top: 10%;
+  text-decoration: none;
 }
 .creditos{
   background-color: #123456;
@@ -77,17 +85,36 @@
   margin: auto;
   right: 10%;
   text-align: center;
+  text-decoration: none;
   text-indent: 0%;
   transition: background-color .5s;
   width: 100%;
 }
 .creditos:hover{
   background-color: #456789;
+  text-decoration: none;
   transition: background-color .5s;
+}
+.letraOscura{
+  color: black;
+  text-decoration: none;
+}
+.letraOscura:visited{
+  color: black;
+  text-decoration: none;
+}
+.letraClara{
+  color: white;
+  text-decoration: none;
+}
+.letraClara:visited{
+  color: white;
+  text-decoration: none;
 }
 body{
   background-color: #555151;
   font-family: 'Quantico', sans-serif;
+  text-decoration: none;
 }
 img{
   border: 1px solid black;
