@@ -11,6 +11,20 @@ function contents(file){
         console.log(error.message)
     })
 }
+function games(file){
+    fetch(file)
+    .then((respuesta)=>{
+        return respuesta.text();
+    })
+    .then((texto)=>{
+        let general = document.querySelector("#general");
+        general.innerHTML = texto;
+    })
+    .catch((error)=>{
+        console.log(error.message)
+    })
+}
+
 fetch('Nav.html')
     .then((response)=>{
         return response.text();
@@ -24,7 +38,35 @@ fetch('Nav.html')
             contents('Interior.html');
         })
         document.querySelector("#DinoJuegos").addEventListener("click",()=>{
-            contents('menuselect.html')
+            fetch('menuselec.html')
+            .then((response)=>{
+                return response.text();
+            })
+            .then((text)=>{
+                let content = document.querySelector("#content");
+                content.innerHTML = text;
+                document.querySelector("#Juego1").addEventListener("click",()=>{
+                    games('Juego1.html');
+                })
+                document.querySelector("#Juego2").addEventListener("click",()=>{
+                    games('Juego2.html');
+                })
+                document.querySelector("#Juego3").addEventListener("click",()=>{
+                    games('Juego3.html');
+                })
+            })
+            .catch((error)=>{
+                console.log(error.message)
+            })
+        })
+        document.querySelector("#Puntajes").addEventListener("click",()=>{
+            contents('Puntajes.html')
+        })
+        document.querySelector("#Ayuda").addEventListener("click",()=>{
+            contents('Ayuda.html')
+        })
+        document.querySelector("#Creditos").addEventListener("click",()=>{
+            contents('Créditos.html')
         })
     })
     .catch((error)=>{
