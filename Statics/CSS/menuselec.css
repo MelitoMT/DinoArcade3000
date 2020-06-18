@@ -61,7 +61,6 @@
   transition: background-color .5s;
 }
 .puntua{
-  background-color: #ABCDEF;
   border-top: 1px solid black;
   font-size: 20px;
   text-align: center;
@@ -69,16 +68,17 @@
   width: 100%;
   text-decoration: none;
 }
-.puntua:hover{
+.puntuac:hover{
   background-color: #89ABCD;
 }
-
+.puntuac{
+  background-color: #ABCDEF;
+}
 .creditosCont{
   padding-top: 10%;
   text-decoration: none;
 }
 .creditos{
-  background-color: #123456;
   border: 1px solid black;
   color: white;
   font-size: 22px;
@@ -90,8 +90,13 @@
   transition: background-color .5s;
   width: 100%;
 }
-.creditos:hover{
+.credi{
+  background-color: #123456;
+}
+.credi:hover{
   background-color: #456789;
+}
+.creditos:hover{
   text-decoration: none;
   transition: background-color .5s;
 }
@@ -115,6 +120,9 @@ body{
   background-color: #555151;
   font-family: 'Quantico', sans-serif;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 img{
   border: 1px solid black;
@@ -124,10 +132,136 @@ img{
 header{
   background-color: black;
   color: white;
-  padding-top: -10%;
-  text-align: center;
   width: 100%;
 }
-h1{
-  text-shadow: 0px 4px 1px #00AAFF;
+.blue:link, .blue:visited,.blue{
+  text-shadow: 0px 4px 4px #01CDA8;
+}
+.blue:hover, .blue:active,.blue:visited{
+  background: rgb(2, 165, 165);
+}
+.LSHC{
+  box-shadow: 0px 4px 20px rgba(0, 219, 193, 0.9);
+}
+a{
+  text-decoration: none;
+  color:white;
+}
+.nav nav{
+  padding-top:10px;
+  border-radius: 5px;
+  height: 40px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.nav nav{
+  background: rgb(46, 46, 46);
+}
+.nav nav ul{
+  list-style: none;
+  margin: 0 auto;    
+}
+.nav nav ul li{
+  display: inline;
+  padding-left: 5%;
+}
+.nav a:link, .nav a:visited{
+  font-family:"Quantico";
+  font-weight: 500;
+  position: relative;
+}
+.nav a:hover, .nav a:active,
+.nav .active a:link, .nav .active a:visited{
+  text-shadow: none;
+}
+.nav ul li a {
+  border-radius: 5px;
+}
+.switch{
+  position: relative;
+  display:inline-block;
+  width: 60px;
+  height:34px;
+}
+.switch input{
+  opacity:0;
+  width:0;
+  height:0;
+}
+.slider{
+  position: absolute;
+  cursor: pointer;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgb(159, 223, 235);
+  background-size: cover;
+  transition: 1s;
+  border-radius: 36px;
+}
+.slider:before{
+  position: absolute;
+  content:"";
+  height:26px;
+  width:26px;
+  left:4px;
+  bottom:4px;
+  background-image:url(../Img/day.jpg);
+  background-size: cover;
+  transition: 1s;
+  border-radius: 50%;
+}
+input:checked+.slider{
+  background-color: rgb(9, 2, 51);
+}
+input:focus+.slider{
+  box-shadow: 0 0 1px rgb(156, 134, 134);
+}
+input:checked+.slider::before{
+  transform: translate(26px);
+  transform: translate(26px);
+  background-image:url(../Img/night.jpg);
+  background-size: cover;
+}
+.pink:link, .pink:visited,.pink{
+  text-shadow: 0px 4px 4px #D400BF;
+}
+.pink:hover, .pink:active,.pink:visited{
+  background:#D400BF;
+}
+.infopink{
+  background-color: rgb(94, 3, 71);
+}
+.infopink:hover{
+  background-color: rgb(48, 1, 36);
+}
+.puntuac2{
+  background-color: rgb(219, 165, 230);
+}
+.puntuac2:hover{
+  background-color: rgb(215, 144, 230);
+}
+.credi2{
+  background-color: rgb(106, 4, 165);
+}
+.credi2:hover{
+  background-color: rgb(74, 34, 97);
+}
+@media only screen and (min-width: 150px) and (max-width: 1000px) {
+  .nav nav{
+      height: 350px;
+  }
+  .nav nav ul{
+      padding-left: 0;
+  }
+  .nav nav ul li{
+      text-align: center;
+      width: 100%;
+  }
+  .nav nav a:link, .nav nav a:visited{
+      display: block;
+      height: 20px;
+      padding: 10px 25px;
+  }
 }
