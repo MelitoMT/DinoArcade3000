@@ -431,21 +431,25 @@ function elTodo()
         {
           vidasP1 = "Fin"
           gusViv = gusViv - 1;
+          posP1 = 100;
         }
         if((isNaN(vidasP2) == false)&&(vidasP2 == 0))
         {
           vidasP2 = "Fin"
           gusViv = gusViv - 1;
+          posP2 = 100;
         }
         if((isNaN(vidasP3) == false)&&(vidasP3 == 0))
         {
           vidasP3 = "Fin"
           gusViv = gusViv - 1;
+          posP3 = 100;
         }
         if((isNaN(vidasP4) == false)&&(vidasP4 == 0))
         {
           vidasP4 = "Fin"
           gusViv = gusViv - 1;
+          posP4 = 100;
         }
       }
 
@@ -705,5 +709,5 @@ present.setAttribute("id","comenzar");
 present.innerHTML = "Presiona Espacio para comenzar..."
 let pantalla = document.getElementsByTagName("article");
 pantalla[0].appendChild(present);
-//Envía a la función que se repite 
+//Envía a la función que se repite
 panInicio();
