@@ -1,0 +1,267 @@
+#contenOpc{
+  background-color: #D1D1D1;
+  border-bottom: 10px solid #AAA1A1;
+  border-left: 10px solid #222121;
+  border-right: 10px solid #AAA1A1;
+  border-top: 10px solid #222121;
+  border: 10%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 5%;
+  text-decoration: none;
+}
+#general{
+  padding-bottom:8%;
+  padding-left:5%;
+  padding-right:5%;
+  padding-top:5%;
+  text-decoration: none;
+}
+.contenJue{
+  background-color: #FFFFFF;
+  border: 1px solid black;
+  bottom: 0%;
+  box-shadow: 0px 0px 0px gray;
+  margin: auto;
+  padding-top:5%;
+  position: relative;
+  text-decoration: none;
+  text-indent: 10%;
+  transition: all .5s;
+  width: 80%;
+}
+.contenJue:hover{
+  bottom: 8%;
+  box-shadow: 0px 20px 10px gray;
+  position: relative;
+  text-decoration: none;
+  transition: all .5s;
+}
+.cuadImg{
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0%;
+}
+.infor{
+  background-color: #123456;
+  border: 1px solid black;
+  color: white;
+  font-size: 22px;
+  margin-left: auto;
+  position: relative;
+  right: 10%;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0%;
+  transition: background-color .5s;
+  width: 30%;
+}
+.infor:hover{
+  background-color: #456789;
+  transition: background-color .5s;
+}
+.puntua{
+  border-top: 1px solid black;
+  font-size: 20px;
+  text-align: center;
+  text-indent: 0%;
+  width: 100%;
+  text-decoration: none;
+}
+.puntuac:hover{
+  background-color: #89ABCD;
+}
+.puntuac{
+  background-color: #ABCDEF;
+}
+.creditosCont{
+  padding-top: 10%;
+  text-decoration: none;
+}
+.creditos{
+  border: 1px solid black;
+  color: white;
+  font-size: 22px;
+  margin: auto;
+  right: 10%;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0%;
+  transition: background-color .5s;
+  width: 100%;
+}
+.credi{
+  background-color: #123456;
+}
+.credi:hover{
+  background-color: #456789;
+}
+.creditos:hover{
+  text-decoration: none;
+  transition: background-color .5s;
+}
+.letraOscura{
+  color: black;
+  text-decoration: none;
+}
+.letraOscura:visited{
+  color: black;
+  text-decoration: none;
+}
+.letraClara{
+  color: white;
+  text-decoration: none;
+}
+.letraClara:visited{
+  color: white;
+  text-decoration: none;
+}
+body{
+  background-color: #555151;
+  font-family: 'Quantico', sans-serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+img{
+  border: 1px solid black;
+  height: 50%;
+  width: 50%;
+}
+header{
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+.blue:link, .blue:visited,.blue{
+  text-shadow: 0px 4px 4px #01CDA8;
+}
+.blue:hover, .blue:active,.blue:visited{
+  background: rgb(2, 165, 165);
+}
+.LSHC{
+  box-shadow: 0px 4px 20px rgba(0, 219, 193, 0.9);
+}
+a{
+  text-decoration: none;
+  color:white;
+}
+.nav nav{
+  padding-top:10px;
+  border-radius: 5px;
+  height: 40px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.nav nav{
+  background: rgb(46, 46, 46);
+}
+.nav nav ul{
+  list-style: none;
+  margin: 0 auto;    
+}
+.nav nav ul li{
+  display: inline;
+  padding-left: 5%;
+}
+.nav a:link, .nav a:visited{
+  font-family:"Quantico";
+  font-weight: 500;
+  position: relative;
+}
+.nav a:hover, .nav a:active,
+.nav .active a:link, .nav .active a:visited{
+  text-shadow: none;
+}
+.nav ul li a {
+  border-radius: 5px;
+}
+.switch{
+  position: relative;
+  display:inline-block;
+  width: 60px;
+  height:34px;
+}
+.switch input{
+  opacity:0;
+  width:0;
+  height:0;
+}
+.slider{
+  position: absolute;
+  cursor: pointer;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgb(159, 223, 235);
+  background-size: cover;
+  transition: 1s;
+  border-radius: 36px;
+}
+.slider:before{
+  position: absolute;
+  content:"";
+  height:26px;
+  width:26px;
+  left:4px;
+  bottom:4px;
+  background-image:url(../Img/day.jpg);
+  background-size: cover;
+  transition: 1s;
+  border-radius: 50%;
+}
+input:checked+.slider{
+  background-color: rgb(9, 2, 51);
+}
+input:focus+.slider{
+  box-shadow: 0 0 1px rgb(156, 134, 134);
+}
+input:checked+.slider::before{
+  transform: translate(26px);
+  transform: translate(26px);
+  background-image:url(../Img/night.jpg);
+  background-size: cover;
+}
+.pink:link, .pink:visited,.pink{
+  text-shadow: 0px 4px 4px #D400BF;
+}
+.pink:hover, .pink:active,.pink:visited{
+  background:#D400BF;
+}
+.infopink{
+  background-color: rgb(94, 3, 71);
+}
+.infopink:hover{
+  background-color: rgb(48, 1, 36);
+}
+.puntuac2{
+  background-color: rgb(219, 165, 230);
+}
+.puntuac2:hover{
+  background-color: rgb(215, 144, 230);
+}
+.credi2{
+  background-color: rgb(75, 0, 85);
+}
+.credi2:hover{
+  background-color: rgb(74, 34, 97);
+}
+@media only screen and (min-width: 150px) and (max-width: 1000px) {
+  .nav nav{
+      height: 350px;
+  }
+  .nav nav ul{
+      padding-left: 0;
+  }
+  .nav nav ul li{
+      text-align: center;
+      width: 100%;
+  }
+  .nav nav a:link, .nav nav a:visited{
+      display: block;
+      height: 20px;
+      padding: 10px 25px;
+  }
+}
