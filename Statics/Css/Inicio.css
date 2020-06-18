@@ -1,15 +1,15 @@
-    @font-face {
-        font-family: 'MuseoModerno', cursive;
-        src: url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&display=swap');
-    }
-    @font-face {
-        font-family: 'Mogra', cursive;
-        src: url('https://fonts.googleapis.com/css2?family=Mogra&family=MuseoModerno:wght@700&display=swap');
-    }
-    @font-face {
-        font-family:  'Quantico', sans-serif;
-        src: url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
-    }
+@font-face {
+    font-family: 'MuseoModerno', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&display=swap');
+}
+@font-face {
+    font-family: 'Mogra', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Mogra&family=MuseoModerno:wght@700&display=swap');
+}
+@font-face {
+    font-family:  'Quantico', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+}
 a{
     text-decoration: none;
 }
@@ -24,6 +24,7 @@ a:hover, a:active{
      color: #FFF;
 }
 .nav nav{
+    padding-top:10px;
     background: rgb(107, 0, 0);
     border-radius: 5px;
     height: 40px;
@@ -56,179 +57,213 @@ a:hover, a:active{
     -webkit-border-radius: 5px;
 }
 
-    body{
-        background-color: rgb(12, 12, 12);
-        margin: 0;
-        padding: 0;
-        border: 0;
+body{
+    background-color: rgb(12, 12, 12);
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    height:700px;
+    width:1000px;
+    background-image: url(../Img/iniciobg.jpg);
+    margin: auto;
+    top:0;
+}
+.arcade{
+    z-index: 5;
+    background-image: url(../Img/inicioarcade.png);
+    background-repeat: no-repeat;
+    position: relative;
+    height:450px;
+    width:300px;
+    left:70%;
+    top:30%;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.arcade:hover,.wLogo:hover,.wHelp:hover,.wScore:hover{
+    transform: scale(1.02);
+}
+.screen{
+    z-index:6;
+    position: relative;
+    width: 160px;
+    height: 100px;
+    left:20%;
+    top: 15%;
+    background: #000000;
+    background-size: contain;
+    border-radius: 4px;
+    box-shadow: 0 0;
+}
+.screen:hover{
+    animation: screen 20s linear;
+}
+#dino{
+    font-family:"MuseoModerno";
+    font-weight: 500;
+    color:rgba(71, 249, 255, 0.993);
+    text-shadow:-3px -1px rgb(231, 0, 0);
+    position: relative;
+    left:35%;
+    top:30%;
+    opacity: 0;
+    animation: dino 5s linear 2s 1;
+}
+.wall{
+    display: grid;
+    width: 50%;
+    height:35%;
+    left:8%;
+    top:20%;
+    position: relative;
+    z-index: 8;
+    background-color: transparent;
+    background-color: transparent;
+}
+.wLogo{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    position: relative;
+    width:90%;
+    height:60%;
+    left:5%;
+    top:20%;
+    background: url(../Img/Dinologo.jpg);
+    background-size: cover;
+    box-shadow: 0px 4px 20px rgba(0, 219, 193, 0.9);
+}
+.wScore{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end:2;
+    width: 80%;
+    height: 70%;
+    position: relative;
+    left:5%;
+    top:60%;
+    background: #525252;
+    box-shadow: 0px 4px 20px rgba(0, 219, 193, 0.9);
+}
+.wHelp{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end:3;
+    width: 80%;
+    height: 70%;
+    position: relative;
+    left:5%;
+    top:60%;
+    background: #525252;
+    box-shadow: 0px 4px 20px rgba(0, 219, 193, 0.9);
+}
+.score,.help{
+    font-family:"Quantico";
+    font-weight: 500;
+    color:#FFFFFF;
+    text-shadow: 0px 4px 4px #01CDA8;
+    position: relative;
+    top:30%;
+    font-size: 20px;
+}
+.help{
+    left:34%;
+}
+.score{
+    left:28%;
+}
+.none:hover{
+    background-color: transparent;
+}
+
+.none:link, .none:visited{
+    color: rgb(248, 248, 248);
+}
+
+@keyframes screen {
+    0%{
+        background: #000000;
+    }
+    5%{
+        background:radial-gradient( rgb(31, 30, 30),rgb(0, 0, 0));
+    }
+    10%{
+        background:radial-gradient(rgb(85, 84, 84),rgb(31, 30, 30));
+    }
+    25%{
+        background:radial-gradient(rgb(150, 145, 145),rgb(85, 84, 84));   
+    }
+    35%{
+        background:radial-gradient(rgb(43, 43, 43),rgb(27, 27, 27));   
+    }
+    60%{
+        background: url(../Img/menu.jpg);
+        background-size: cover;
+    }
+    100%{
+        background: url(../Img/menu.jpg);
+        background-size: cover;
+    }
+}
+@keyframes dino{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@media only screen and (min-width: 150px) and (max-width: 1000px) {
+    .nav nav{
+        height: 300px;
+    }
+    .nav nav ul{
+        padding-left: 0;
+    }
+    .nav nav ul li{
+        text-align: center;
+        width: 100%;
+    }
+    .nav nav a:link, .nav nav a:visited{
+        display: block;
+        height: 20px;
+        padding: 10px 25px;
     }
     .flex{
-        display: flex;
-        flex-wrap: wrap;
-        height:700px;
-        width:1000px;
-        background-image: url(../Img/iniciobg.jpg);
-        margin: auto;
-        top:0;
+        height:350px;
+        width:500px;
+        background-size: cover;
     }
     .arcade{
-        z-index: 5;
-        background-image: url(../Img/inicioarcade.png);
-        background-repeat: no-repeat;
-        position: relative;
-        height:450px;
-        width:300px;
-        left:70%;
-        top:30%;
-        transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
-    }
-    .arcade:hover,.wLogo:hover,.wHelp:hover,.wScore:hover{
-        transform: scale(1.02);
+        height:250px;
+        width:150px;
+        left:50%;
+        top:15%;
+        background-size: cover;
     }
     .screen{
-        z-index:6;
-        position: relative;
-        width: 160px;
-        height: 100px;
-        left:20%;
-        top: 15%;
-        background: #000000;
-        background-size: contain;
-        border-radius: 4px;
-        box-shadow: 0 0;
-    }
-    .screen:hover{
-        animation: screen 20s linear;
-    }
-    #dino{
-        font-family:"MuseoModerno";
-        font-weight: 500;
-        color:rgba(71, 249, 255, 0.993);
-        text-shadow:-3px -1px rgb(231, 0, 0);
-        position: relative;
-        left:35%;
-        top:30%;
-        opacity: 0;
-        animation: dino 5s linear 2s 1;
+        height:50px;
+        width:90px;
     }
     .wall{
-        display: grid;
-        width: 50%;
-        height:35%;
-        left:8%;
-        top:20%;
-        position: relative;
-        z-index: 8;
-        background-color: transparent;
-    }
-    .wLogo{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 4;
-        position: relative;
-        width:90%;
-        height:60%;
-        left:5%;
-        top:20%;
-        background: url(../Img/Dinologo.jpg);
-        background-size: cover;
-        box-shadow: 0px 4px 20px rgba(0, 219, 193, 0.9);
-    }
-    .wScore{
-        grid-column-start: 2;
-        grid-row-start: 1;
-        grid-row-end:2;
-        width: 80%;
-        height: 70%;
-        position: relative;
-        left:5%;
-        top:60%;
-        background: #525252;
-        box-shadow: 0px 4px 20px rgba(0, 219, 193, 0.9);
-    }
-    .wHelp{
-        grid-column-start: 2;
-        grid-row-start: 2;
-        grid-row-end:3;
-        width: 80%;
-        height: 70%;
-        position: relative;
-        left:5%;
-        top:60%;
-        background: #525252;
-        box-shadow: 0px 4px 20px rgba(0, 219, 193, 0.9);
+        width: 45%;
+        height: 30%;
     }
     .score,.help{
-        font-family:"Quantico";
-        font-weight: 500;
-        color:#FFFFFF;
-        text-shadow: 0px 4px 4px #01CDA8;
-        position: relative;
-        top:30%;
-        font-size: 20px;
+        font-size: 10px;
     }
-    .help{
-        left:34%;
+    #dino{
+        font-size: 10px;
     }
-    .score{
-        left:28%;
+}
+/* @media only screen and (min-width: 600px) and (max-width: 800px) {
+    .flex{
+        height:350px;
+        width:500px;
+        background-size: cover;
     }
-    .none:hover{
-        background-color: transparent;
-    }
-    
-    .none:link, .none:visited{
-        color: rgb(248, 248, 248);
-    }
-
-    @keyframes screen {
-        0%{
-            background: #000000;
-        }
-        5%{
-            background:radial-gradient( rgb(31, 30, 30),rgb(0, 0, 0));
-        }
-        10%{
-            background:radial-gradient(rgb(85, 84, 84),rgb(31, 30, 30));
-        }
-        25%{
-            background:radial-gradient(rgb(150, 145, 145),rgb(85, 84, 84));   
-        }
-        35%{
-            background:radial-gradient(rgb(43, 43, 43),rgb(27, 27, 27));   
-        }
-        60%{
-            background: url(../Img/menu.jpg);
-            background-size: cover;
-        }
-        100%{
-            background: url(../Img/menu.jpg);
-            background-size: cover;
-        }
-    }
-    @keyframes dino{
-        0%{
-            opacity: 0;
-        }
-        100%{
-            opacity:1;
-        }
-    }
-    @media only screen and (min-width: 150px) and (max-width: 600px) {
-        .nav nav{
-          height: 300px;
-        }
-        .nav nav ul{
-          padding-left: 0;
-        }
-        .nav nav ul li{
-          text-align: center;
-          width: 100%;
-        }
-        .nav nav a:link, .nav nav a:visited{
-          display: block;
-          height: 20px;
-          padding: 10px 25px;
-        }
-    }
+} */
