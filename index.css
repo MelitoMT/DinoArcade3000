@@ -1,24 +1,48 @@
+#circulo1{
+  width: 10%;
+  height: 5%;
+  background-color: yellow;
+  border-radius: 50%;
+  position: relative;
+  left: 90%;
+  top: 50%;
+  z-index: 100%;
+}
+#circulo2{
+  width: 10%;
+  height: 5%;
+  background-color: yellow;
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  z-index: 100%;
+}
 body{
-  background-image: url(Statics/Img/FondoEntrada.png);
+  background-image: url(Statics/Img/Entrada.png);
   background-size: cover;
 }
 
+
 #Inicio{
   background-color: black;
-  box-shadow: 5px 5px 8px black;
-  height: 200px;
+  box-shadow: -5px -5px -8px black;
+  font-size: 40px;
+  height: 290px;
   left: 731px;
   position: absolute;
-  top: 468px;
+  text-align: center;
+  top: 400px;
   width: 156px;
 }
 #Registro{
   background-color: black;
   box-shadow: 5px 5px 8px black;
-  height: 200px;
+  font-size: 40px;
+  height: 290px;
   left: 890px;
   position: absolute;
-  top: 468px;
+  text-align: center;
+  top: 400px;
   width: 156px;
 }
 .nav nav{
