@@ -1,0 +1,53 @@
+body {
+  background-image: url(../img/back.PNG);
+  background-repeat: no-repeat;
+  background-size: 100%;
+};
+a{
+    text-decoration: none;
+}
+a:link, a:visited{
+    color: rgb(92, 92, 92);
+}
+a:hover, a:active{
+     background-color: rgb(13, 175, 94);
+     color: #FFF;
+}
+.nav nav{
+    background: rgb(107, 0, 0);
+    border-radius: 5px;
+    height: 40px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.nav nav ul{
+    list-style: none;
+    margin: 0 auto;
+}
+.nav nav ul li{
+    display: inline;
+    padding-left: 5%;
+}
+.nav a:link, .nav a:visited{
+    font-family:"Quantico";
+    font-weight: 500;
+    color:#FFFFFF;
+    text-shadow: 0px 4px 4px #01CDA8;
+    position: relative;
+}
+.nav a:hover, .nav a:active,
+.nav .active a:link, .nav .active a:visited{
+    background: rgb(2, 165, 165);
+    text-shadow: none;
+}
+.nav ul li a {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+    body{
+        background-color: rgb(12, 12, 12);
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
