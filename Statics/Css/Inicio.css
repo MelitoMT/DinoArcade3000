@@ -13,23 +13,15 @@
 a{
     text-decoration: none;
 }
-
-
-a:link, a:visited{
-    color: rgb(92, 92, 92);
-}
-
-a:hover, a:active{
-     background-color: rgb(13, 175, 94);
-     color: #FFF;
-}
 .nav nav{
     padding-top:10px;
-    background: rgb(107, 0, 0);
     border-radius: 5px;
     height: 40px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+}
+.nav nav{
+    background: rgb(46, 46, 46);
 }
 .nav nav ul{
     list-style: none;
@@ -42,13 +34,10 @@ a:hover, a:active{
 .nav a:link, .nav a:visited{
     font-family:"Quantico";
     font-weight: 500;
-    color:#FFFFFF;
-    text-shadow: 0px 4px 4px #01CDA8;
     position: relative;
 }
 .nav a:hover, .nav a:active,
 .nav .active a:link, .nav .active a:visited{
-    background: rgb(2, 165, 165);
     text-shadow: none;
 }
 .nav ul li a {
@@ -68,13 +57,11 @@ body{
     flex-wrap: wrap;
     height:700px;
     width:1000px;
-    background-image: url(../Img/iniciobg.jpg);
     margin: auto;
     top:0;
 }
 .arcade{
     z-index: 5;
-    background-image: url(../Img/inicioarcade.png);
     background-repeat: no-repeat;
     position: relative;
     height:450px;
@@ -102,10 +89,10 @@ body{
     animation: screen 20s linear;
 }
 #dino{
-    font-family:"MuseoModerno";
-    font-weight: 500;
     color:rgba(71, 249, 255, 0.993);
     text-shadow:-3px -1px rgb(231, 0, 0);
+    font-family:"MuseoModerno";
+    font-weight: 500;
     position: relative;
     left:35%;
     top:30%;
@@ -135,7 +122,6 @@ body{
     top:20%;
     background: url(../Img/Dinologo.jpg);
     background-size: cover;
-    box-shadow: 0px 4px 20px rgba(0, 219, 193, 0.9);
 }
 .wScore{
     grid-column-start: 2;
@@ -146,8 +132,6 @@ body{
     position: relative;
     left:5%;
     top:60%;
-    background: #525252;
-    box-shadow: 0px 4px 20px rgba(0, 219, 193, 0.9);
 }
 .wHelp{
     grid-column-start: 2;
@@ -158,14 +142,10 @@ body{
     position: relative;
     left:5%;
     top:60%;
-    background: #525252;
-    box-shadow: 0px 4px 20px rgba(0, 219, 193, 0.9);
 }
 .score,.help{
     font-family:"Quantico";
     font-weight: 500;
-    color:#FFFFFF;
-    text-shadow: 0px 4px 4px #01CDA8;
     position: relative;
     top:30%;
     font-size: 20px;
@@ -183,7 +163,60 @@ body{
 .none:link, .none:visited{
     color: rgb(248, 248, 248);
 }
+.switch{
+    position: relative;
+    display:inline-block;
+    width: 60px;
+    height:34px;
+}
+.switch input{
+    opacity:0;
+    width:0;
+    height:0;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgb(159, 223, 235);
+    background-size: cover;
+    transition: 1s;
+    border-radius: 36px;
+}
+.slider:before{
+    position: absolute;
+    content:"";
+    height:26px;
+    width:26px;
+    left:4px;
+    bottom:4px;
+    background-image:url(../Img/day.jpg);
+    background-size: cover;
+    transition: 1s;
+    border-radius: 50%;
+}
+.SHC{
+    background: #525252;
+}
+.score,.help,.nav a:link, .nav a:visited{
+    color:#FFFFFF;
+}
 
+input:checked+.slider{
+    background-color: rgb(9, 2, 51);
+}
+input:focus+.slider{
+    box-shadow: 0 0 1px rgb(156, 134, 134);
+}
+input:checked+.slider::before{
+    transform: translate(26px);
+    transform: translate(26px);
+    background-image:url(../Img/night.jpg);
+    background-size: cover;
+}
 @keyframes screen {
     0%{
         background: #000000;
@@ -260,10 +293,35 @@ body{
         font-size: 10px;
     }
 }
-/* @media only screen and (min-width: 600px) and (max-width: 800px) {
-    .flex{
-        height:350px;
-        width:500px;
-        background-size: cover;
-    }
-} */
+/* colores 1 */
+.blue:link, .blue:visited,.blue{
+    text-shadow: 0px 4px 4px #01CDA8;
+}
+.blue:hover, .blue:active,.blue:visited{
+    background: rgb(2, 165, 165);
+}
+.LSHC{
+    box-shadow: 0px 4px 20px rgba(0, 219, 193, 0.9);
+}
+.flexC{
+    background-image: url(../Img/iniciobg.jpg);
+}
+.arcadeC{
+    background-image: url(../Img/inicioarcade.png);
+}
+/* colores 2 */
+.pink:link, .pink:visited,.pink{
+    text-shadow: 0px 4px 4px #D400BF;
+}
+.pink:hover, .pink:active,.pink:visited{
+    background:#D400BF;
+}
+.LSHC2{
+    box-shadow: 0px 4px 20px #D400BF;
+}
+.flexC2{
+    background-image: url(../Img/iniciobgd.jpg);
+}
+.arcadeC2{
+    background-image: url(../Img/arcadebgd.png);
+}
