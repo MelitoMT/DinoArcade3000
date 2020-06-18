@@ -45,7 +45,7 @@ fetch('Nav.html')
             .then((text)=>{
                 let content = document.querySelector("#content");
                 content.innerHTML = text;
-                document.querySelector("#Juego1").addEventListener("click",()=>{
+/*                 document.querySelector("#Juego1").addEventListener("click",()=>{
                     games('juego1.html');
                 })
                 document.querySelector("#Juego2").addEventListener("click",()=>{
@@ -54,7 +54,7 @@ fetch('Nav.html')
                 document.querySelector("#Juego3").addEventListener("click",()=>{
                     games('Juego3.html');
                 })
-            })
+ */            })
             .catch((error)=>{
                 console.log(error.message)
             })
