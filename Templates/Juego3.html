@@ -3,8 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego 3 </title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="../Statics/Css/Juego3.css">
+     <title>Running from Extinction</title>
 </head>
 <body>
+  <div id="menu">
+    <div id="transparent">
+      <button id="start">Jugar</button>
+    </div>
+  </div>
+  <div id="map">
+    <div id="gameOverView">
+      <div id="slope">
+        <br>
+        <br>
+        <div id="playergameScore"></div>
+        <br>
+      </div>
+    </div>
+    <div id="gameScore">Puntuación : 0</div>
+    <div id="playerGroup">
+      <img id="Player" src="../Statics/Img/nave.png" height="75" width="45" draggable="false" />
+
+      <img id="piuPiuObj" src="../Statics/Img/balita.png" height="30" width="15" />
+      <div id="meteorite"></div>
+    </div>
+    <img class="stones" src="../Statics/Img/meteo.png">
+    <img class="stones" src="../Statics/Img/meteo.png">
+    <img class="stones" src="../Statics/Img/meteo.png">
+    <img class="stones" src="../Statics/Img/meteo.png">
+    <img class="stones" src="../Statics/Img/meteo.png">
+    <img class="stones" src="../Statics/Img/meteo.png">
+    <img class="stones" src="../Statics/Img/meteo.png">
+    <img class="stones" src="../Statics/Img/meteo.png">
+    <img class="stones" src="../Statics/Img/meteo.png">
+  </div>
+  <script src="../Dynamics/JS/Juego3.js"></script>
 </body>
 </html>

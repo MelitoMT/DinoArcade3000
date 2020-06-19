@@ -1,0 +1,110 @@
+#map{
+    border:1px solid black;
+    height:100%;
+    width:100%;  
+    position:fixed; 
+    top:0%; 
+    bottom:0%;
+    left:0%;
+    right:0%; 
+    margin:auto;
+    overflow: hidden;
+    background: url("../Img/space.jpg") 100% 100%;
+    background-size:cover;
+    display: none;
+}
+#playerGroup{
+    position: absolute;
+    left: 125;
+    bottom:80;
+}
+.stones{
+    position: absolute;
+    top:50;
+    left:90;
+    height: 30px;
+    width:30px;
+}
+#piuPiuObj{
+    position: absolute;
+    top:-25;
+    left:17;
+    margin: auto;
+    display: none;
+
+}
+#Player{
+    position: absolute;
+}
+#gameScore{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    right:5;
+}
+#meteorite{
+    height: 55;
+    width: 35;
+    position: absolute; 
+    top: 8;
+    left:5;
+}
+#slope{
+    height:170;
+    width: 200;
+    box-shadow: 1px 0 6px 1px rgba(0,0,0,0.5);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15;
+    position: fixed;
+    top:-500;
+    left:0;
+    right:0;
+    margin: auto;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    background: #fff;
+    transition: top 500ms linear;
+    border-radius: 12px;
+}
+#gameOverView{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left:0;
+    top:0;
+}
+#start{
+    height:30;
+    width: 80;
+    border:none;
+    background: #A1C2D6;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    top:50%;
+}
+#start:hover{
+    background:#DEECF5;
+}
+#start:focus{
+    outline: none;
+}
+#menu{
+    height: 350px;
+    width: 250px;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    margin: auto; 
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18;
+    text-align: center;
+    border-radius:50px;
+    box-shadow: 0 3px 14px 1px rgba(0, 0, 0, 1);
+    background: #1b1b1b;
+    background-size: 100% 100%;
+    display: none;
+}
