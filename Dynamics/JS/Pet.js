@@ -65,6 +65,9 @@ fetch('Nav.html')
         document.querySelector("#Creditos").addEventListener("click",()=>{
             contents('Creditos.html')
         })
+        document.querySelector("#Ayuda").addEventListener("click",()=>{
+            contents('Ayuda.html')
+        })
     })
     .catch((error)=>{
         console.log(error.message)
