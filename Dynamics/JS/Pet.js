@@ -38,7 +38,7 @@ fetch('Nav.html')
             contents('Interior.html');
         })
         document.querySelector("#DinoJuegos").addEventListener("click",()=>{
-            fetch('menuselec.html')
+            fetch('Menu.html')
             .then((response)=>{
                 return response.text();
             })
