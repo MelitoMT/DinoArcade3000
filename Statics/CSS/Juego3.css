@@ -2,16 +2,16 @@
     border:1px solid black;
     height:100%;
     width:100%;  
-    position:fixed; 
-    top:0%; 
-    bottom:0%;
-    left:0%;
-    right:0%; 
     margin:auto;
     overflow: hidden;
     background: url("../Img/space.jpg") 100% 100%;
     background-size:cover;
     display: none;
+    position:fixed; 
+    top:0%; 
+    bottom:0%;
+    left:0%;
+    right:0%; 
 }
 #playerGroup{
     position: absolute;
