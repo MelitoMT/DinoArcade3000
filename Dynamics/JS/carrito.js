@@ -214,7 +214,7 @@ position.frame = function () {
     var a = position.childNodes[i+1];
     a.innerText = value[i];
   }
-  if(car.position == 198){
+  if(car.position == 1){
     alert("Ganaste en " + car.km + " km");
     game.started = false;
     frame.stop = true;
