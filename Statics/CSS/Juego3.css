@@ -40,7 +40,7 @@
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
-    right:5;
+    left:5;
 }
 #meteorite{
     height: 55;
@@ -77,7 +77,7 @@
     height:30;
     width: 80;
     border:none;
-    background: #A1C2D6;
+    background: rgb(253, 109, 26);
     border-radius: 10px;
     cursor: pointer;
     position: relative;
@@ -90,7 +90,7 @@
     outline: none;
 }
 #menu{
-    height: 350px;
+    height: 150px;
     width: 250px;
     position: fixed;
     top: 0%;
