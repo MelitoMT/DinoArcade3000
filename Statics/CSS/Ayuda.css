@@ -1,5 +1,26 @@
+@font-face {
+    font-family:  'Quantico', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+}
+body{
+    background-color: rgb(1, 165, 165);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Quantico';
+}
 .flex{
-    height:800px;
-    width:80%;
-    background-color:rgb(0, 123, 139) ;
+    width:50%;
+    background-color: rgba(0, 0, 0, 0.473);
+    margin: auto;
+    padding: 100px;
+    padding-bottom: 300px;
+    color: white;
+}
+.navImg{
+    width:100%;
+}
+.inicio{
+    width: 40%;
+    float: right;
 }
