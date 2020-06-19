@@ -6,17 +6,26 @@
     <link rel="stylesheet" href="./Statics/Css/index.css">
     <link rel="shortcut icon" href="../Statics/Img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../Statics/Img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Statics/Css/Inicio.css">
     <title>Document</title>
 </head>
 <body>
-    <div id="Inicio">
-        <div id="circulo1"></div>
-        <a href="./Templates/Cafeteria.html">Inicio</a>
+  <header class="nav" id="nav">
+    <nav>
+      <ul>
+        <li><a href="#" class="blue" id="Ayuda"></a></li>
+      </ul>
+  </nav>
+</header>
+    <div class="flex2 flex3">
+      <div class="registro">
+        <form action="Templates/Cafeteria.html" method="post">
+        <h2 class="reg">REGISTRO</h2>
+        <input type="text" name="usuario" id="text" placeholder="Usuario">
+          <input type="submit" value="ACEPTAR" id="submit">
+        </form>
       </div>
-      <div id="Registro">
-        <div id="circulo2"></div>
-        <a href="Registro.html">Registro</a>
-      </div>
-      <footer id="footer"></footer>  
+    </div>
 </body>
 </html>
