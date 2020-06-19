@@ -62,9 +62,6 @@ fetch('Nav.html')
         document.querySelector("#Puntajes").addEventListener("click",()=>{
             contents('Puntajes.html')
         })
-        document.querySelector("#Ayuda").addEventListener("click",()=>{
-            contents('Ayuda.html')
-        })
         document.querySelector("#Creditos").addEventListener("click",()=>{
             contents('Créditos.html')
         })
