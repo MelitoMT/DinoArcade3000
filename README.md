@@ -6,10 +6,10 @@
 * Melo Téllez Mariana Itzel
 ## _Instalación del proyecto:_
 ### _1.Requerimentos generales:_
-*Navegador Web Actualizado(Se recomienda ocupar Chrome).
-*Carpeta del proyecto
+* Navegador Web Actualizado(Se recomienda ocupar Chrome).
+* Carpeta del proyecto
 ###  _2.Instalación:_
-*Para instalar este proyecto sólo es necesario pegar la carpeta del proyecto en la ubicación deseada, tras esto si no se conoce la ruta exacta se recomienda dar clic derecho en la carpeta, seleccionar propiedades y copiar la ruta que aparece en el campo "Ubicación", finalmente esta ruta se pegara en el buscador y podremos utilizarlo.
+Para instalar este proyecto sólo es necesario pegar la carpeta del proyecto en la ubicación deseada, tras esto si no se conoce la ruta exacta se recomienda dar clic derecho en la carpeta, seleccionar propiedades y copiar la ruta que aparece en el campo "Ubicación", finalmente esta ruta se pegara en el buscador y podremos utilizarlo.
 ## _Configuraciones generales:_
 Para el correcto funcionamiento de proyecto es necesario asegurarse antes de utilizarlo que tenemos activado el uso de cookies en el navegador, de la misma forma no tener desactivado JavaScript, pues de lo contrario no se podrá utilizar adecuadamente.
 ## _Características del proyecto:_
