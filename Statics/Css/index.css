@@ -1,25 +1,21 @@
 #circulo1{
-  width: 10%;
-  height: 5%;
   background-color: yellow;
   border-radius: 50%;
+  height: 5%;
   position: relative;
   left: 90%;
   top: 50%;
+  width: 10%;
   z-index: 100%;
 }
 #circulo2{
-  width: 10%;
-  height: 5%;
   background-color: yellow;
   border-radius: 50%;
+  height: 5%;
   position: relative;
   top: 50%;
+  width: 10%;
   z-index: 100%;
-}
-body{
-  background-image: url(Statics/Img/Entrada.png);
-  background-size: cover;
 }
 
 
@@ -46,10 +42,10 @@ body{
   width: 156px;
 }
 .nav nav{
-    padding-top:10px;
     background: rgb(107, 0, 0);
     border-radius: 5px;
     height: 40px;
+    padding-top:10px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
 }
@@ -62,11 +58,11 @@ body{
     padding-left: 5%;
 }
 .nav a:link, .nav a:visited{
+    color:#FFFFFF;
     font-family:"Quantico";
     font-weight: 500;
-    color:#FFFFFF;
-    text-shadow: 0px 4px 4px #01CDA8;
     position: relative;
+    text-shadow: 0px 4px 4px #01CDA8;
 }
 .nav a:hover, .nav a:active,
 .nav .active a:link, .nav .active a:visited{
@@ -77,4 +73,10 @@ body{
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+}
+
+body{
+  background-image: url(../IMG/Entrada.png);
+  background-size: 1350px;
+  font-family:  'Quantico', sans-serif;
 }
