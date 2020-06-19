@@ -1,3 +1,11 @@
+@font-face {
+    font-family:  'Quantico', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+}
+body{
+    font-family: 'Quantico';
+    background-color: rgb(55, 55, 56);
+}  
 #map{
     border:1px solid black;
     height:100%;
@@ -54,7 +62,6 @@
     width: 200;
     box-shadow: 1px 0 6px 1px rgba(0,0,0,0.5);
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15;
     position: fixed;
     top:-500;
@@ -62,7 +69,7 @@
     right:0;
     margin: auto;
     border-bottom: 1px solid rgba(0,0,0,0.5);
-    background: #fff;
+    background: rgb(141, 0, 0);
     transition: top 500ms linear;
     border-radius: 12px;
 }
@@ -81,10 +88,11 @@
     border-radius: 10px;
     cursor: pointer;
     position: relative;
-    top:50%;
+    top:50px;
 }
 #start:hover{
-    background:#DEECF5;
+    background:rgb(85, 0, 0);
+    color: white;
 }
 #start:focus{
     outline: none;
@@ -99,7 +107,6 @@
     bottom: 0%;
     margin: auto; 
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18;
     text-align: center;
     border-radius:50px;
