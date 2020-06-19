@@ -10,39 +10,197 @@ function elTodo()
   let ancho = window.innerWidth;
   let alto = window.innerHeight;
   let pasoArr = 0;
+  //Función para verificar cookies
+  function obtenerCookie(clave)
+  {
+    var name = clave + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++)
+    {
+      var c = ca[i];
+      while (c.charAt(0) == ' ')
+      {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0)
+      {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
   //Variables de casillas especiales
-  let casRe1 = 12;
-  let casRe2 = 24;
+  let preCasRe1 = obtenerCookie("casReCoo1");
+  if(preCasRe1 === "")
+  {
+    var casRe1 = 12;
+  }
+  else
+  {
+    var casRe1 = preCasRe1;
+  }
+  let preCasRe2 = obtenerCookie("casReCoo2");
+  if(preCasRe2 === "")
+  {
+    var casRe2 = 24;
+  }
+  else
+  {
+    var casRe2 = preCasRe2;
+  }
   //Variables de juego
   let dadoNum = 0;
   let dadoSin = 0;
   let pase = false;
   let stand = 0;
   let enter = 0;
-  let turno = "P4";
-  let turnoE = "P1"
+  var c = new Date();
+
+  let preTurno = obtenerCookie("turnoCoo");
+  if(preTurno === "")
+  {
+    var turno = "P4";
+  }
+  else
+  {
+    var turno = preTurno;
+  }
+  let preTurnoE = obtenerCookie("turnoECoo");
+  if(preTurnoE === "")
+  {
+    var turnoE = "P1";
+  }
+  else
+  {
+    var turnoE = preTurnoE;
+  }
   let pasoAdelante = 0;
-  let gusViv = 4;
+  let preGusViv = obtenerCookie("gusVivCoo");
+  if(preGusViv == "")
+  {
+    var gusViv = 4;
+  }
+  else
+  {
+    var gusViv = parseInt(preGusViv);
+  }
   let apuesta = 0;
   let turnoActual = 0;
   let vidaActual = 0;
   //Variables de puntuación
-  let puntosP1 = 0;
-  let puntosP2 = 0;
-  let puntosP3 = 0;
-  let puntosP4 = 0;
-  let vidasP1 = 9;
-  let vidasP2 = 9;
-  let vidasP3 = 9;
-  let vidasP4 = 9;
+  let prePuntosP1 = obtenerCookie("puntosP1Coo");
+  if(prePuntosP1 === "")
+  {
+    var puntosP1 = 0;
+  }
+  else
+  {
+    var puntosP1 = parseInt(prePuntosP1);
+  }
+  let prePuntosP2 = obtenerCookie("puntosP2Coo");
+  if(prePuntosP2 === "")
+  {
+    var puntosP2 = 0;
+  }
+  else
+  {
+    var puntosP2 = parseInt(prePuntosP2);
+  }
+  let prePuntosP3 = obtenerCookie("puntosP3Coo");
+  if(prePuntosP3 === "")
+  {
+    var puntosP3 = 0;
+  }
+  else
+  {
+    var puntosP3 = parseInt(prePuntosP3);
+  }
+  let prePuntosP4 = obtenerCookie("puntosP4Coo");
+  if(prePuntosP4 === "")
+  {
+    var puntosP4 = 0;
+  }
+  else
+  {
+    var puntosP4 = parseInt(prePuntosP4);
+  }
+  let preVidasP1 = obtenerCookie("vidasP1Coo");
+  if(preVidasP1 === "")
+  {
+    var vidasP1 = 9;
+  }
+  else
+  {
+    var vidasP1 = parseInt(preVidasP1);
+  }
+  let preVidasP2 = obtenerCookie("vidasP2Coo");
+  if(preVidasP2 === "")
+  {
+    var vidasP2 = 9;
+  }
+  else
+  {
+    var vidasP2 = parseInt(preVidasP2);
+  }
+  let preVidasP3 = obtenerCookie("vidasP3Coo");
+  if(preVidasP3 === "")
+  {
+    var vidasP3 = 9;
+  }
+  else
+  {
+    var vidasP3 = parseInt(preVidasP3);
+  }
+  let preVidasP4 = obtenerCookie("vidasP4Coo");
+  if(preVidasP4 === "")
+  {
+    var vidasP4 = 9;
+  }
+  else
+  {
+    var vidasP4 = parseInt(preVidasP4);
+  }
   //Arreglo con las casillas ordenadas que deben existir
   var arrEsc = new Array(30,20,10,11,1,2,3,4,5,15,16,17,18,19,29,39,38,48,47,46,36,
     35,34,33,43,53,54,64,65,66,67,68,78,88,87,86,85,84,83,82,81,71,70,60,50,40);
   //Posiciones iniciales de los jugadores
-  let posP3 = 0;
-  let posP4 = 0;
-  let posP1 = 0;
-  let posP2 = 0;
+  let prePosP3 = obtenerCookie("posP3Coo");
+  if(prePosP3 === "")
+  {
+    var posP3 = 0;
+  }
+  else
+  {
+    var posP3 = parseInt(prePosP3);
+  }
+  let prePosP4 = obtenerCookie("posP4Coo");
+  if(prePosP4 === "")
+  {
+    var posP4 = 0;
+  }
+  else
+  {
+    var posP4 = parseInt(prePosP4);
+  }
+  let prePosP1 = obtenerCookie("posP1Coo");
+  if(prePosP1 === "")
+  {
+    var posP1 = 0;
+  }
+  else
+  {
+    var posP1 = parseInt(prePosP1);
+  }
+  let prePosP2 = obtenerCookie("posP2Coo");
+  if(prePosP2 === "")
+  {
+    var posP2 = 0;
+  }
+  else
+  {
+    var posP2 = parseInt(prePosP2);
+  }
+  console.log(posP1 +","+ posP2 +","+ posP3 +","+ posP4);
   //Asegura el valor del dado con el turno detenido
   if (pase == false)
   {
@@ -571,7 +729,29 @@ function elTodo()
           espacio = event.keyCode;
           if(espacio === 32)
           {
-            console.log("más listo");
+            var c = new Date();
+
+            c.setTime(c.getTime()-1);
+
+            document.cookie = "casReCoo1 =" + casRe1 + " ;expires=" + c.toGMTString();
+            document.cookie = "casReCoo2 =" + casRe2 + " ;expires=" + c.toGMTString();
+            document.cookie = "turnoCoo =" + turno + " ;expires=" + c.toGMTString();
+            document.cookie = "turnoECoo =" + turnoE + " ;expires=" + c.toGMTString();
+            document.cookie = "puntosP1Coo =" + puntosP1 + " ;expires=" + c.toGMTString();
+            document.cookie = "puntosP2Coo =" + puntosP2 + " ;expires=" + c.toGMTString();
+            document.cookie = "puntosP3Coo =" + puntosP3 + " ;expires=" + c.toGMTString();
+            document.cookie = "puntosP4Coo =" + puntosP4 + " ;expires=" + c.toGMTString();
+            document.cookie = "vidasP1Coo =" + vidasP1 + " ;expires=" + c.toGMTString();
+            document.cookie = "vidasP2Coo =" + vidasP2 + " ;expires=" + c.toGMTString();
+            document.cookie = "vidasP3Coo =" + vidasP3 + " ;expires=" + c.toGMTString();
+            document.cookie = "vidasP4Coo =" + vidasP4 + " ;expires=" + c.toGMTString();
+            document.cookie = "vidasP4Coo =" + vidasP4 + " ;expires=" + c.toGMTString();
+            document.cookie = "posP1Coo =" + posP1 + " ;expires=" + c.toGMTString();
+            document.cookie = "posP2Coo =" + posP2 + " ;expires=" + c.toGMTString();
+            document.cookie = "posP3Coo =" + posP3 + " ;expires=" + c.toGMTString();
+            document.cookie = "posP4Coo =" + posP4 + " ;expires=" + c.toGMTString();
+            document.cookie = "gusVivCoo =" + gusViv + " ;expires=" + c.toGMTString();
+            var borrando = document.getElementById("contenedorgen");
             para = true;
             var elimina = document.getElementById("comenzar");
             elimina.remove();
@@ -587,7 +767,7 @@ function elTodo()
       //Tras termindo el juego, establece la pantalla de finalización por primera vez
       function juegoTerm()
       {
-        var borrando = document.getElementById("contenedorgen");
+
         borrando.remove();
         var borrandoCif = document.getElementById("avanceDado");
         borrandoCif.remove();
@@ -620,6 +800,30 @@ function elTodo()
       }
       juegoTerm();
     }
+
+    //Guardado especial de cookies en cada momento para mantener el estado de juego
+    var c = new Date();
+
+    c.setTime(c.getTime()+1000*60*50);
+
+    document.cookie = "casReCoo1 =" + casRe1 + " ;expires=" + c.toGMTString();
+    document.cookie = "casReCoo2 =" + casRe2 + " ;expires=" + c.toGMTString();
+    document.cookie = "turnoCoo =" + turno + " ;expires=" + c.toGMTString();
+    document.cookie = "turnoECoo =" + turnoE + " ;expires=" + c.toGMTString();
+    document.cookie = "puntosP1Coo =" + puntosP1 + " ;expires=" + c.toGMTString();
+    document.cookie = "puntosP2Coo =" + puntosP2 + " ;expires=" + c.toGMTString();
+    document.cookie = "puntosP3Coo =" + puntosP3 + " ;expires=" + c.toGMTString();
+    document.cookie = "puntosP4Coo =" + puntosP4 + " ;expires=" + c.toGMTString();
+    document.cookie = "vidasP1Coo =" + vidasP1 + " ;expires=" + c.toGMTString();
+    document.cookie = "vidasP2Coo =" + vidasP2 + " ;expires=" + c.toGMTString();
+    document.cookie = "vidasP3Coo =" + vidasP3 + " ;expires=" + c.toGMTString();
+    document.cookie = "vidasP4Coo =" + vidasP4 + " ;expires=" + c.toGMTString();
+    document.cookie = "vidasP4Coo =" + vidasP4 + " ;expires=" + c.toGMTString();
+    document.cookie = "posP1Coo =" + posP1 + " ;expires=" + c.toGMTString();
+    document.cookie = "posP2Coo =" + posP2 + " ;expires=" + c.toGMTString();
+    document.cookie = "posP3Coo =" + posP3 + " ;expires=" + c.toGMTString();
+    document.cookie = "posP4Coo =" + posP4 + " ;expires=" + c.toGMTString();
+    document.cookie = "gusVivCoo =" + gusViv + " ;expires=" + c.toGMTString();
 
     setTimeout(() =>
     {
