@@ -157,6 +157,7 @@ function meteoriteCrash(){
             stones[i].style.display="none";
         }
 }
+/* Movimientos y teclas */
 function rightDir() {
     continuousMovement=true;
     dirPlayer=4;
@@ -181,7 +182,7 @@ function keys(dir) {
       rightDir();
     }
     else if (dir.keyCode === 37) {
-      leftDir();/* izq */
+      leftDir();
     }
     else if(dir.keyCode === 32){
         PiuPiu();
