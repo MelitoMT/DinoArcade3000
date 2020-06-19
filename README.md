@@ -1,8 +1,8 @@
 # DinoArcade3000🦖
 ## _Integrantes_
-*De Luna Santillán Juan de Dios
-*Gutierrez Tafoya Jorge
-*Herrera González Silvia
+* De Luna Santillán Juan de Dios
+* Gutierrez Tafoya Jorge
+* Herrera González Silvia
 * Melo Téllez Mariana Itzel
 ## _Instalación del proyecto:_
 ### _1.Requerimentos generales:_
