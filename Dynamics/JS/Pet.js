@@ -63,7 +63,7 @@ fetch('Nav.html')
             contents('Puntajes.html')
         })
         document.querySelector("#Creditos").addEventListener("click",()=>{
-            contents('Créditos.html')
+            contents('Creditos.html')
         })
     })
     .catch((error)=>{
