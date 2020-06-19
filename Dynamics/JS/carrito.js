@@ -214,8 +214,13 @@ position.frame = function () {
     var a = position.childNodes[i+1];
     a.innerText = value[i];
   }
-  if (position == 198){
-    alert("Ganaste");
+  if(car.position == 198){
+    alert("Ganaste en " + car.km + " km");
+    game.started = false;
+    frame.stop = true;
+    clearTimeout(game.curveCount);
+    clearTimeout(game.timeCount);
+    game.audio.oscillator.stop();
   }
 }
 var lap = document.getElementById('lap');
